@@ -21,10 +21,10 @@ const Education = ({ education, deleteEducation }) => {
 
     ));
     return (
-        <Fragment>
+        <div style = {table_style}>
             <h2  style = {exp_style} className="my-2">Education Credentials </h2>
             <table className="table">
-                <thead>
+                <thead style = {{ background:'#17a2b8', color:'white'}}>
                     <tr>
                         <th>School/College</th>
                         <th className="hide-sm">Degree/Certificate</th>
@@ -32,9 +32,11 @@ const Education = ({ education, deleteEducation }) => {
                         <th />
                     </tr>
                 </thead>
-                <tbody>{educations}</tbody>
+                <tbody>
+                {educations}
+                </tbody>
             </table>
-        </Fragment>
+        </div>
     )
 }
 
@@ -44,10 +46,13 @@ Education.propTypes = {
 }
 
 const exp_style = {
-    fontFamily:'Merriweather',
     fontSize:'24px',
     fontWeight:'350'
 }
 
+
+const table_style = {
+
+}
 
 export default connect(null, { deleteEducation })(Education)

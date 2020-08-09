@@ -24,7 +24,7 @@ const Experience = ({ experience, deleteExperience }) => {
         <Fragment>
             <h2 style = {exp_style} className="my-2">Experience Credentials </h2>
             <table className="table">
-                <thead>
+                <thead style = {{ background:'#17a2b8', color:'white'}}>
                     <tr>
                         <th>Company</th>
                         <th className="hide-sm">Title</th>
